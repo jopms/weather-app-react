@@ -2,7 +2,7 @@ import React,{useEffect} from "react";
 
 
 const ForecastWeatherCard = ({ data, offSet, setOpenDetailCard }) => {
-
+  const day = new Date(data.dt* 1000);
   useEffect(() => {
     document.getElementsByClassName("forecast-card")[offSet-1].classList.remove("fade-out");
 
@@ -28,7 +28,7 @@ const ForecastWeatherCard = ({ data, offSet, setOpenDetailCard }) => {
   return (
     <div className="forecast-card fade-out" onClick={() => handleClick()}>
       <div className="forecast-day-wrapper">
-        <span className="forecast-day">{getTimeAndDate(offSet) + "."}</span>
+      <span className="forecast-day">{day.toString().split(" ")[0] + "."}</span>
       </div>
       <div className="forecast-icon-text">
         <div className="forecast-icon"><div className={`icon${data.weather[0].icon} forecast-icon`}></div>
