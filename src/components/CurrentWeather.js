@@ -3,7 +3,6 @@ import "../styles/style.css";
 import "../icons/icons.css";
 
 const CurrentWeather = ({ data }) => {
-
   const [timeAndDate, setTimeAndDate] = useState("");
   const [isCelcius, setIsCelcius] = useState(true);
 

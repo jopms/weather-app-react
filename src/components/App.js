@@ -14,7 +14,7 @@ const App = () => {
   const [forecastData, setForecastData] = useState({});
 
   const time = new Date().getHours();
-  
+
   useEffect(() => {
     if (time <= 20) {
       document
@@ -81,13 +81,17 @@ const App = () => {
     }
   };
 
-  const searchByLocation = (location) => {
+  const searchByLocation = (location, save) => {
     axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`
       )
       .then(({ data }) => {
         setData(data);
+        document.getElementById("search-bar").value = "";
+        if (save) {
+          saveLocation(data);
+        }
         axios
           .get(
             //`https://api.openweathermap.org/data/2.5/find?lat=${coords.latitude}&lon=${coords.longitude}&cnt=10&appid=${API_KEY}`
@@ -100,7 +104,15 @@ const App = () => {
       });
   };
 
-  const saveLocation = () => {
+  const handleClickSave = () => {
+    if (document.getElementById("search-bar").value !== "") {
+      searchByLocation(document.getElementById("search-bar").value, true);
+      return;
+    }
+    saveLocation(data);
+  };
+
+  const saveLocation = (data) => {
     if (savedLocations.length > 0) {
       if (
         !savedLocations.some(
@@ -152,6 +164,7 @@ const App = () => {
             <CurrentWeather data={data} />
             <div className="search-bar">
               <input
+                id="search-bar"
                 type="text"
                 onKeyUp={(e) => {
                   handleKeyPress(e);
@@ -161,13 +174,10 @@ const App = () => {
                     ? `${data?.name} , ${data?.sys?.country}`
                     : "Search new location..."
                 }
-                onBlur={(e) => {
-                  e.target.value = "";
-                }}
               />
               <button
                 onClick={() => {
-                  saveLocation();
+                  handleClickSave();
                 }}
                 className="button-save"
               >
