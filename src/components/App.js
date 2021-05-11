@@ -16,7 +16,7 @@ const App = () => {
   const time = new Date().getHours();
 
   useEffect(() => {
-    if (time <= 20) {
+    if (time >= 20) {
       document
         .getElementsByClassName("center-div")[0]
         .classList.remove("background-blue");
