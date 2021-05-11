@@ -12,7 +12,7 @@ const SavedLocations = ({ data, deleteLocation, openLocation }) => {
       <div key={location.city + location.country} className="saved-locations">
         <div className="text-close">
           <div className="saved-location-text" onClick={()=>{openLocation(location)}}>
-            <span className="saved-location-city">{location.city}</span> | {location.country}
+            <span className="saved-location-city">{location.city}</span><span className="saved-location-country"> | {location.country}</span>
           </div>
           <span className="close-icon" onClick={()=>{deleteLocation(location)}}>
             <i className="times circle icon"></i>

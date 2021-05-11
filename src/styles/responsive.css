@@ -111,6 +111,16 @@
   .center-div {
     padding-bottom: 7rem;
   }
+  .saved-location-text{
+    font-size:2.0rem;
+  }
+  .saved-location-city{
+    max-width: 120px;
+    height:20px;
+  }
+  .close-icon>i{
+    font-size:1.2rem;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -122,6 +132,18 @@
   }
   .search-bar {
     margin-bottom: 2rem;
+  }
+  .forecast-title {
+    font-size: 3.3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+  }
+  .forecast-left-info {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .forecast-card-description {
+    font-size: 2.5rem;
   }
 }
 
@@ -155,6 +177,22 @@
   .current-time {
     font-size: 2.5rem;
     padding: 0.2rem;
+  }
+  .saved-location-text{
+    font-size:2.5rem;
+  }
+  .saved-location-city{
+    max-width: 150px;
+    height:23px;
+  }
+  .saved-location-country{
+    height: 23px;
+  }
+  .close-icon>i{
+    font-size:1.6rem;
+  }
+  .close-icon{
+    margin-bottom:20px;
   }
 }
 
@@ -212,5 +250,23 @@
 @media screen and (orientation: landscape) and (max-height: 300px) {
   .middle-div {
     transform: scale(0.35);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 250px) {
+  .middle-div {
+    transform: scale(0.30);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 240px) {
+  .middle-div {
+    transform: scale(0.25);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 200px) {
+  .middle-div {
+    transform: scale(0.20);
   }
 }
