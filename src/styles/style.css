@@ -1,5 +1,5 @@
-body{
-  position:fixed;
+body {
+  position: fixed;
 }
 
 .background-blue {
@@ -254,10 +254,14 @@ body{
 .saved-location-city {
   margin-right: 5px;
   white-space: nowrap;
-
+  height: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 90px;
+}
+
+.saved-location-country {
+  height: 22px;
 }
 
 .text-close:hover {
@@ -397,4 +401,12 @@ body{
 .fade-in {
   opacity: 1;
   transition: opacity 0.4s linear;
+}
+
+.ui.message {
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
 }

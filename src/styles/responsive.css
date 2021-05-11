@@ -111,26 +111,24 @@
   .center-div {
     padding-bottom: 7rem;
   }
-  .saved-location-text{
-    font-size:2.0rem;
+  .saved-location-text {
+    font-size: 2rem;
   }
-  .saved-location-city{
-    max-width: 120px;
-    height:20px;
+  .saved-location-city {
+    height: 20px;
   }
-  .close-icon>i{
-    font-size:1.2rem;
+  .close-icon > i {
+    font-size: 1.2rem;
   }
-  .forecast-day{
+  .forecast-day {
     text-shadow: 2px 2px 10px #0000002d;
   }
-  .forecast-text{
+  .forecast-text {
     text-shadow: 2px 2px 10px #0000002d;
   }
-  .forecast-temp>span{
+  .forecast-temp > span {
     text-shadow: 2px 2px 10px #0000002d;
   }
-  
 }
 
 @media only screen and (max-width: 450px) {
@@ -188,21 +186,17 @@
     font-size: 2.5rem;
     padding: 0.2rem;
   }
-  .saved-location-text{
-    font-size:2.5rem;
-  }
-  .saved-location-city{
-    max-width: 150px;
-    height:23px;
-  }
-  .saved-location-country{
+  .saved-location-city {
     height: 23px;
   }
-  .close-icon>i{
-    font-size:1.6rem;
+  .saved-location-country {
+    height: 23px;
   }
-  .close-icon{
-    margin-bottom:20px;
+  .close-icon > i {
+    font-size: 1.6rem;
+  }
+  .close-icon {
+    margin-bottom: 20px;
   }
 }
 
@@ -265,7 +259,7 @@
 
 @media screen and (orientation: landscape) and (max-height: 250px) {
   .middle-div {
-    transform: scale(0.30);
+    transform: scale(0.3);
   }
 }
 
@@ -277,6 +271,6 @@
 
 @media screen and (orientation: landscape) and (max-height: 200px) {
   .middle-div {
-    transform: scale(0.20);
+    transform: scale(0.2);
   }
 }

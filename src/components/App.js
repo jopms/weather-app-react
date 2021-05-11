@@ -108,6 +108,10 @@ const App = () => {
 
   const saveLocation = (data) => {
     if (savedLocations.length > 0) {
+      if (savedLocations.length >= 6) {
+        addAlert();
+        return;
+      }
       if (
         !savedLocations.some(
           (location) =>
@@ -150,8 +154,42 @@ const App = () => {
     searchByLocation(`${locationToOpen.city},${locationToOpen.country}`);
   };
 
+  const addAlert = () => {
+    if (
+      document
+        .getElementsByClassName("alert-message")[0]
+        .classList.contains("hidden")
+    ) {
+      document
+        .getElementsByClassName("alert-message")[0]
+        .classList.remove("hidden");
+    }
+  };
+
+  const removeAlert = () => {
+    if (
+      !document
+        .getElementsByClassName("alert-message")[0]
+        .classList.contains("hidden")
+    ) {
+      document
+        .getElementsByClassName("alert-message")[0]
+        .classList.add("hidden");
+    }
+  };
+
   return (
     <>
+      <div class="ui negative floating message alert-message hidden">
+        <i
+          class="close icon"
+          onClick={() => {
+            removeAlert();
+          }}
+        ></i>
+        <div class="header">You cannot save more cities.</div>
+        <p>The maximum is 6</p>
+      </div>
       {Object.keys(data).length > 0 ? (
         <div className="center-div background-blue">
           <div className="middle-div">
