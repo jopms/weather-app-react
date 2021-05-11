@@ -16,7 +16,7 @@ const App = () => {
   const time = new Date().getHours();
 
   useEffect(() => {
-    if (time >= 20) {
+    if (time >= 20 && time <= 7) {
       document
         .getElementsByClassName("center-div")[0]
         .classList.remove("background-blue");
@@ -44,9 +44,7 @@ const App = () => {
     if (Object.keys(coords).length !== 0) {
       axios
         .get(
-          //`https://api.openweathermap.org/data/2.5/find?lat=${coords.latitude}&lon=${coords.longitude}&cnt=10&appid=${API_KEY}`
           `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}`
-          //`https://api.openweathermap.org/data/2.5/onecall?lat=${coords.latitude}&lon=${coords.longitude}&exclude=""&appid=${API_KEY}`
         )
         .then(({ data }) => {
           setData(data);
@@ -54,8 +52,6 @@ const App = () => {
 
       axios
         .get(
-          //`https://api.openweathermap.org/data/2.5/find?lat=${coords.latitude}&lon=${coords.longitude}&cnt=10&appid=${API_KEY}`
-          //`https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}`
           `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.latitude}&lon=${coords.longitude}&exclude=minutely,hourly&appid=${API_KEY}`
         )
         .then(({ data }) => {
@@ -94,8 +90,6 @@ const App = () => {
         }
         axios
           .get(
-            //`https://api.openweathermap.org/data/2.5/find?lat=${coords.latitude}&lon=${coords.longitude}&cnt=10&appid=${API_KEY}`
-            //`https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}`
             `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=minutely,hourly&appid=${API_KEY}`
           )
           .then(({ data }) => {
