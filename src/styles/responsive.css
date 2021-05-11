@@ -121,6 +121,16 @@
   .close-icon>i{
     font-size:1.2rem;
   }
+  .forecast-day{
+    text-shadow: 2px 2px 10px #0000002d;
+  }
+  .forecast-text{
+    text-shadow: 2px 2px 10px #0000002d;
+  }
+  .forecast-temp>span{
+    text-shadow: 2px 2px 10px #0000002d;
+  }
+  
 }
 
 @media only screen and (max-width: 450px) {
