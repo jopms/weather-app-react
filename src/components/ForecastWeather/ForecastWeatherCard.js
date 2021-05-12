@@ -1,5 +1,15 @@
 import React, { useEffect } from "react";
 
+/**
+ * ForecastWeatherCard displays the Forecast Weather
+ *
+ * Props:
+ *  - data (data to be displayed)
+ *  - offSet (value of class index of each card, needed to fade in and fade out)
+ *  - setOpenDetailCard (callback function to open ForecastWeatherCardOpened component)
+ *  setOpenDetailCard(dataToOpen)
+ */
+
 const ForecastWeatherCard = ({ data, offSet, setOpenDetailCard }) => {
   const day = new Date(data.dt * 1000);
 

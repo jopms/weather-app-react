@@ -1,13 +1,17 @@
 import React from "react";
 
+/**
+ * SavedLocations component displays the saved locations by the user
+ *
+ * Props:
+ *  - data (data to be displayed)
+ *  - deleteLocation (callback function used to delete the location)
+ *  - openLocation (callback function used to "open" the location and display the 
+ *  corresponding current and forecast weather )
+ */
+
 const SavedLocations = ({ data, deleteLocation, openLocation }) => {
-
-
-
   return data.map((location) => {
-
-    
-
     return (
       <div key={location.city + location.country} className="saved-locations">
         <div className="text-close">

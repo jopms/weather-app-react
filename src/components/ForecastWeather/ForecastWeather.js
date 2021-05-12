@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import ForecastWeatherCard from "./ForecastWeatherCard";
 import ForecastWeatherOpened from "./ForecastWeatherOpened";
 
+/**
+ * ForecastWeather component organizes ForecastWeatherCards and 
+ * handles the opening and closing of ForecastWeatherOpened
+ *
+ * Props:
+ *  - data (data to be displayed)
+ */
+
 const ForecastWeather = ({ data }) => {
   const [openDetailCard, setOpenDetailCard] = useState(false);
 
