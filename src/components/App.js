@@ -27,7 +27,9 @@ const App = () => {
     /**
      * Changes background color depending on the user's time
      */
-    if (time >= 20 && time <= 7) {
+    console.log(time)
+    if (time >= 20 || time <= 7) {
+      console.log("entering")
       document
         .getElementsByClassName("center-div")[0]
         .classList.remove("background-blue");
