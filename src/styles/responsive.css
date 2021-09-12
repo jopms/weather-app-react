@@ -8,18 +8,22 @@
   .middle-div {
     transform: scale(0.8);
   }
+
   .current-weather-wrapper {
     margin-bottom: 2rem;
   }
+
   .search-bar > input {
     border-radius: 25px;
     padding: 1rem;
     font-size: 1.3rem;
   }
+
   .button-save {
     font-size: 1.1rem;
     border-radius: 25px;
   }
+
   .forecast-temp > span {
     font-size: 1.5rem;
   }
@@ -35,22 +39,27 @@
   .middle-div {
     transform: scale(0.6);
   }
+
   .search-bar > input {
     border-radius: 35px;
     padding: 1.4rem;
     font-size: 1.6rem;
   }
+
   .button-save {
     font-size: 1.3rem;
     border-radius: 35px;
   }
+
   .forecast-temp > span {
     font-size: 1.8rem;
     margin-bottom: 8px;
   }
+
   .current-time {
     font-size: 2.2rem;
   }
+
   .current-weather-text {
     font-size: 2.7rem;
   }
@@ -60,16 +69,20 @@
   .middle-div {
     transform: scale(0.5);
   }
+
   .search-bar > input {
     width: 55%;
   }
+
   .button-save {
     font-size: 1.5rem;
   }
+
   .forecast-day {
     font-size: 3.5rem;
     margin-bottom: 35px;
   }
+
   .forecast-text {
     margin: 2rem 0;
     font-size: 2.5rem;
@@ -80,25 +93,30 @@
   .middle-div {
     transform: scale(0.45);
   }
+
   .forecast-title {
     font-size: 2.5rem;
     padding-top: 1rem;
     padding-bottom: 2.5rem;
   }
+
   .forecast-left-info {
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
   }
+
   .forecast-info {
     padding: 1.5rem;
     width: 28rem;
   }
+
   .forecast-card-icon > .forecast-icon {
     width: 110px;
     height: 110px;
     margin-bottom: 10px;
     background-size: 110px auto;
   }
+
   .forecast-card-description {
     font-size: 2rem;
   }
@@ -108,24 +126,31 @@
   .middle-div {
     transform: scale(0.4);
   }
+
   .center-div {
     padding-bottom: 7rem;
   }
+
   .saved-location-text {
     font-size: 1.65rem;
   }
+
   .saved-location-city {
     height: 20px;
   }
+
   .close-icon > i {
     font-size: 1.2rem;
   }
+
   .forecast-day {
     text-shadow: 2px 2px 10px #0000002d;
   }
+
   .forecast-text {
     text-shadow: 2px 2px 10px #0000002d;
   }
+
   .forecast-temp > span {
     text-shadow: 2px 2px 10px #0000002d;
   }
@@ -135,21 +160,26 @@
   .middle-div {
     transform: scale(0.35);
   }
+
   .center-div {
     padding-bottom: 10rem;
   }
+
   .search-bar {
     margin-bottom: 2rem;
   }
+
   .forecast-title {
     font-size: 3.3rem;
     padding-top: 1.5rem;
     padding-bottom: 4rem;
   }
+
   .forecast-left-info {
     font-size: 1.9rem;
     margin-bottom: 1.5rem;
   }
+
   .forecast-card-description {
     font-size: 2.5rem;
   }
@@ -159,42 +189,53 @@
   .middle-div {
     transform: scale(0.3);
   }
+
   .current-weather-wrapper {
     margin-bottom: 8rem;
   }
+
   .search-bar {
     margin-bottom: 3.5rem;
   }
+
   .search-bar > input {
     padding: 1.6rem;
     font-size: 1.8rem;
     width: 60%;
   }
+
   .button-save {
     font-size: 1.8rem;
   }
   .forecast-wrapper {
     margin-top: 3.5rem;
   }
+
   .current-location-time {
     width: 500px;
   }
+
   .current-city {
     font-size: 7rem;
   }
+
   .current-time {
     font-size: 2.5rem;
     padding: 0.2rem;
   }
+
   .saved-location-city {
     height: 23px;
   }
+
   .saved-location-country {
     height: 23px;
   }
+
   .close-icon > i {
     font-size: 1.6rem;
   }
+
   .close-icon {
     margin-bottom: 20px;
   }
@@ -204,9 +245,11 @@
   .middle-div {
     transform: scale(0.25);
   }
+
   .search-bar {
     margin-bottom: 3.5rem;
   }
+
   .button-save {
     font-size: 1.8rem;
     border-radius: 35px;
@@ -217,9 +260,11 @@
   .middle-div {
     transform: scale(0.2);
   }
+
   .search-bar {
     margin-bottom: 3.5rem;
   }
+
   .search-bar > input {
     border-radius: 35px;
     padding: 1.6rem;

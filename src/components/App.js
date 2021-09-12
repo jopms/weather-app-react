@@ -27,9 +27,7 @@ const App = () => {
     /**
      * Changes background color depending on the user's time
      */
-    console.log(time)
     if (time >= 20 || time <= 7) {
-      console.log("entering")
       document
         .getElementsByClassName("center-div")[0]
         .classList.remove("background-blue");
@@ -40,6 +38,8 @@ const App = () => {
 
     /**
      * Asks user for his geolocation if the browsers supports it
+     * Triggers an alert when user's browser does not support geolocation
+     * Gets his saved locations from local storage and saves them in savedLocations  variable
      */
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
@@ -91,7 +91,7 @@ const App = () => {
 
   /**
    * Callback function to show alert when failing to get position
-   * Sets coords to default value (location: Leiria)
+   * Sets coords to default value (location: Leiria) and alerts user
    */
   const failurePosition = ({ message }) => {
     alert(message + " Location set to Leiria!");
@@ -112,7 +112,8 @@ const App = () => {
 
   /**
    * Makes a new get request by location
-   * Saves the location if'save' variable is set to true
+   * Saves the location if 'save' variable is set to true
+   * Hides the alert if showing
    */
   const searchByLocation = (location, save) => {
     axios
@@ -122,9 +123,10 @@ const App = () => {
       .then(({ data }) => {
         setData(data);
         document.getElementById("search-bar").value = "";
-        if (save) {
-          saveLocation(data);
-        }
+        save && saveLocation(data);
+        !showSearchAlert && setShowSearchAlert("hidden");
+        !showMaxAlert && setShowMaxAlert("hidden");
+
         axios
           .get(
             `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=minutely,hourly&appid=${API_KEY}`
@@ -151,7 +153,8 @@ const App = () => {
   };
 
   /**
-   * Saves a location if it does not exist yet in saved locations, and if whithin the max limit
+   * Saves a location both in local storage and savedLocation variable
+   * if it does not exist yet in saved locations, and if whithin the max limit
    */
   const saveLocation = (data) => {
     if (savedLocations.length > 0) {
@@ -187,6 +190,13 @@ const App = () => {
   };
 
   /**
+   * Triggers a new search by location when clicking a saved location
+   */
+  const openLocation = (locationToOpen) => {
+    searchByLocation(`${locationToOpen.city},${locationToOpen.country}`);
+  };
+
+  /**
    * Deletes a location when cliking the "x" icon in saved locations
    * Updates local storage and savedLocations variable
    */
@@ -199,13 +209,6 @@ const App = () => {
     });
     setSavedLocations(updatedList);
     localStorage.setItem("location", JSON.stringify([...updatedList]));
-  };
-
-  /**
-   * Triggers a new search by location when clicking a saved location
-   */
-  const openLocation = (locationToOpen) => {
-    searchByLocation(`${locationToOpen.city},${locationToOpen.country}`);
   };
 
   return (
@@ -262,7 +265,7 @@ const App = () => {
                       openLocation={openLocation}
                     />
                   ) : (
-                    <div className="blank"></div>
+                    null
                   )}
                 </div>
               </div>

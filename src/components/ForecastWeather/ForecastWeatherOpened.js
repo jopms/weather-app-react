@@ -14,8 +14,8 @@ const ForecastWeatherOpened = ({ setOpenDetailCard, data }) => {
   /**
    * Conversion of data in Unix timestamp to time
    */
-  const sunRise = new Date(data.sunRise * 1000);
-  const sunSet = new Date(data.sunSet * 1000);
+  const sunrise = new Date(data.sunrise * 1000);
+  const sunset = new Date(data.sunset * 1000);
   const day = new Date(data.dt * 1000);
 
   useEffect(() => {
@@ -39,12 +39,12 @@ const ForecastWeatherOpened = ({ setOpenDetailCard, data }) => {
           <div className="forecast-body">
             <div className="forecast-info">
               <div className="forecast-left-info">
-                <span>Sun Rise</span>
-                <span>{sunRise.toTimeString().slice(0, 5) + "H"}</span>
+                <span>Sunrise</span>
+                <span>{sunrise.toTimeString().slice(0, 5) + "H"}</span>
               </div>
               <div className="forecast-left-info">
-                <span>Sun Set</span>
-                <span>{sunSet.toTimeString().slice(0, 5) + "H"}</span>
+                <span>Sunset</span>
+                <span>{sunset.toTimeString().slice(0, 5) + "H"}</span>
               </div>
               <div className="forecast-left-info">
                 <span>Humidity</span>

@@ -10,6 +10,7 @@ body {
   background: linear-gradient(to bottom right, #5f8acf, #aae1f5);
   color: #ffffff;
 }
+
 .background-dark-blue {
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #04043f, #18115f, #0a072b);
@@ -55,6 +56,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+
 .current-city {
   font-size: 6rem;
   font-weight: 300;
@@ -73,10 +75,12 @@ body {
   border-radius: 2px;
   background-color: #f1f1f1;
 }
+
 .current-location {
   display: flex;
   justify-content: center;
 }
+
 .current-country {
   font-size: 2rem;
   font-weight: 300;
@@ -132,6 +136,7 @@ body {
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
 }
+
 .search-bar {
   display: flex;
   justify-content: center;
@@ -157,6 +162,81 @@ body {
   color: #424242;
 }
 
+/* Saved locations */
+
+.saved-locations-centered {
+  display: flex;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.saved-locations-wrap {
+  display: flex;
+  min-height: 59px;
+}
+
+.saved-locations {
+  display: flex;
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.saved-location-text {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.5rem;
+}
+
+.saved-location-city {
+  margin-right: 5px;
+  white-space: nowrap;
+  height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90px;
+}
+
+.saved-location-country {
+  height: 22px;
+}
+
+.text-close:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  text-shadow: 2px 2px 10px #00000056;
+}
+
+.close-icon {
+  visibility: hidden;
+}
+
+.text-close:hover .close-icon {
+  visibility: visible;
+}
+
+/* Divider between saved locations and forecast weather cards */
+
+.divider {
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  outline: transparent;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.close-icon > i {
+  font-size: 0.8rem;
+}
+
+.text-close {
+  display: flex;
+  height: 32px;
+  margin-bottom: 5px;
+  transition: all 0.05s linear;
+}
+
 /* Forecast Weather */
 .forecast-card {
   display: flex;
@@ -175,6 +255,7 @@ body {
   box-shadow: 2px 2px 10px #00000018;
   transform: scale(1.02);
 }
+
 .forecast-wrapper {
   display: flex;
   justify-content: space-between;
@@ -222,94 +303,11 @@ body {
   overflow: hidden;
 }
 
-.margin-right {
+.forecast-temp-max {
   margin-right: 10px;
 }
 
-.blank {
-  min-height: 59px;
-}
-
-.saved-locations-centered {
-  display: flex;
-  justify-content: center;
-  min-height: 80px;
-}
-
-.saved-locations-wrap {
-  display: flex;
-}
-
-.saved-locations {
-  display: flex;
-  margin-top: 40px;
-  margin-right: 20px;
-}
-
-.saved-location-text {
-  display: flex;
-  align-items: flex-end;
-  font-size: 1.5rem;
-}
-
-.saved-location-city {
-  margin-right: 5px;
-  white-space: nowrap;
-  height: 22px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 90px;
-}
-
-.saved-location-country {
-  height: 22px;
-}
-
-.text-close:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  text-shadow: 2px 2px 10px #00000056;
-}
-
-.close-icon {
-  visibility: hidden;
-}
-
-.text-close:hover .close-icon {
-  visibility: visible;
-}
-
-.divider {
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  outline: transparent;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.blank-divider {
-  height: 3px;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  outline: transparent;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 59px;
-}
-
-.close-icon > i {
-  font-size: 0.8rem;
-}
-
-.text-close {
-  display: flex;
-  height: 32px;
-  margin-bottom: 5px;
-  transition: all 0.05s linear;
-}
+/* Forecast card opened */
 
 .forecast-opened-wrapper {
   display: flex;
@@ -333,6 +331,7 @@ body {
 .forecast-body {
   display: flex;
 }
+
 .card-divider {
   display: flex;
   height: 100%;
@@ -395,15 +394,18 @@ body {
   color: #f1f1f1;
 }
 
+/* Transition in forecast cards */
 .fade-out {
   opacity: 0;
   transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
 .fade-in {
   opacity: 1;
   transition: opacity 0.4s linear;
 }
 
+/* Alert messages */
 .ui.message {
   margin: 0;
   position: fixed;

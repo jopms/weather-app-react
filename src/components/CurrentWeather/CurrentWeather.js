@@ -53,7 +53,7 @@ const CurrentWeather = ({ data }) => {
         >
           {isCelcius
             ? Math.round(data?.main?.temp - 273.15) + "º"
-            : Math.round(((data?.main?.temp - 273.15) * 9) / 5 + 32) + "F"}
+            : Math.round(((data?.main?.temp - 273.15) * 9) / 5 + 32) + "ºF"}
         </h1>
       </div>
       <div className="current-location-time">

@@ -41,7 +41,7 @@ const ForecastWeatherCard = ({ data, offSet, setOpenDetailCard }) => {
       </div>
       <div className="forecast-max-min">
         <div className="forecast-temp">
-          <span className="margin-right">Máx.</span>
+          <span className="forecast-temp-max">Máx.</span>
           <span>{Math.round(data.temp?.max - 273.15)}º</span>
         </div>
         <div className="forecast-temp">
